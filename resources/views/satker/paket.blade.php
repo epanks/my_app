@@ -21,33 +21,33 @@
                             <th>Nama Balai</th>
                             <th>Nama Paket</th>
                             <th>Pagu</th>
-                            <th>Rencana Keuangan</th>
-                            <th>Rencana Fisik</th>
-                            <th>Progres Keuangan</th>
-                            <th>Progres Fisik</th>
-                            <th>Satker ID</th>
-                            
+                            <th>Output</th>
+                            <th>Satuan Output</th>
+                            <th>Outcome</th>
+                            <th>Satoutcome</th>
+                            <th>Kode Output</th>
+                            <th>Modify</th>
                         </tr>
 
                     @foreach ($data_satker as $no => $satker)  
                     
                         <tr>
                             <td>{{++$no}}</td>
-                            <td>{{$satker->nmsatker}}</td>
+                            <td>{{$satker->kdsatker}}</td>
                             <td><a href="#">{{$satker->nmpaket}}</td>
                             <td class="text-right">{{number_format($satker->pagurmp)}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{number_format($satker->trgoutput)}}</td>
+                            <td>{{$satker->satoutput}}</td>
+                            <td>{{number_format($satker->trgoutcome)}}</td>
+                            <td>{{$satker->satoutcome}}</td>
+                            <td>{{$satker->kdoutput}}</td>
                             <td></td>                            
                         </tr>
                         
                         @endforeach
                     </tbody>
                 </table>
-                {{-- {{$data_balai->links()}} --}}
+                {{$data_satker->links()}}
             </div>
         
         </div>

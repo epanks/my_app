@@ -46,8 +46,8 @@
                     <div class="info-box mb-3">
                         <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
                         <div class="info-box-content">
-                            {{-- <span class="info-box-text"><a href="/paket">Jumlah Paket</a></span> --}}
-                            {{-- <span class="info-box-number">{{$satker2->count()}}<small>paket</small></span> --}}
+                            <span class="info-box-text"><a href="/paket">Jumlah Paket</a></span>
+                            <span class="info-box-number">{{$paket->count()}}<small>paket</small></span>
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Wilayah;
 use App\Balai;
 use App\Satker;
+use App\Paket;
 
 class HomeController extends Controller
 {
@@ -31,11 +32,11 @@ class HomeController extends Controller
 
     public function index()
     {
-        //$paket = Paket::all();
+        $paket = Paket::all();
         $balai = Balai::all();
         $satker = Satker::all();
         $wilayah = Wilayah::all();
         //dd($paket);
-        return view('home', compact('satker', 'balai','wilayah'));
+        return view('home', compact('satker', 'balai','wilayah','paket'));
     }
 }

@@ -18,14 +18,15 @@
                     <tbody>
                         <tr>
                             <th>No</th>
-                            {{-- <th>Nama Balai</th> --}}
+                            <th>Nama Balai</th>
                             <th>Nama Paket</th>
                             <th>Pagu</th>
-                            <th>Rencana Keuangan</th>
-                            <th>Rencana Fisik</th>
-                            <th>Progres Keuangan</th>
-                            <th>Progres Fisik</th>
-                            <th>Satker ID</th>
+                            <th>Output</th>
+                            <th>Satuan Output</th>
+                            <th>Outcome</th>
+                            <th>Satuan Outcome</th>
+                            <th>Kode Output</th>
+                            <th>Modify</th>
                             
                         </tr>
 
@@ -33,12 +34,14 @@
                     
                         <tr>
                             <td>{{++$no}}</td>
+                            <td>{{$paket->kdsatker}}</td>
                             <td><a href="#">{{$paket->nmpaket}}</td>
                             <td class="text-right">{{number_format($paket->pagurmp)}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{number_format($paket->trgoutput)}}</td>
+                            <td>{{$paket->satoutput}}</td>
+                            <td>{{number_format($paket->trgoutcome)}}</td>
+                            <td>{{$paket->satoutcome}}</td>
+                            <td>{{$paket->kdoutput}}</td>
                             <td></td>
                             <td></td>                            
                         </tr>

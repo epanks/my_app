@@ -33,7 +33,7 @@
                     
                         <tr>
                             <td>{{++$no}}</td>
-                            <td><a href="/satker/{{$satker->id}}/profile">{{$satker->nmsatker}}</td>
+                            <td><a href="/satker/{{$satker->id}}">{{$satker->nmsatker}}</td>
                             <td></td>
                             {{-- <td></td>
                             <td></td>

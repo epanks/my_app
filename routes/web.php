@@ -24,10 +24,8 @@ Route::get('/wilayah/{id}','BalaiController@wilayah');
 Route::get('/balai','BalaiController@index');
 Route::get('/balai/{id}','BalaiController@satker');
 
-//Route::get('/balai/{$id}','SatkerController@balai');
 Route::get('/satker','SatkerController@index');
 Route::get('/satker/{id}','SatkerController@paket');
-//Route::get('/balai/{id}/satker','SatkerController@satker');
 
 Route::get('/paket','PaketController@index');
 Route::get('/paket/{id}','PaketController@paket');
