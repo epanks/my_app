@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Satker;
 use App\Balai;
+use App\Wilayah;
 
 class SatkerController extends Controller
 {
@@ -21,9 +22,10 @@ class SatkerController extends Controller
 
     public function paket($id)
     {
-        $data_satker = Satker::find($id)->paket()->paginate(10);
+        $data_satker = Satker::find($id)->paket;
+        $data_balai = $data_satker;
         //dd($data_satker);
-        return view('satker.paket', compact('data_satker'));
+        return view('satker.paket', compact('data_satker','wilayah'));
     }
    
     public function profile($id)

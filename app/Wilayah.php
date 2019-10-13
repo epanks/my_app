@@ -13,12 +13,10 @@ class Wilayah extends Model
     {
         return $this->hasMany(Balai::class);
     }
-    // public function satker()
-    // {
-    //     return $this->hasManyThrough(Satker::class, Balai::class)->join('paket','satker.kdsatker','=','paket.kdsatker')->select(
-    //         'paket.*'
-    //     );
-    // }
+    public function satker()
+    {
+        return $this->hasManyThrough(Satker::class, Balai::class);
+    }
     public function paket()
     {
         return $this->hasManyDeep(Paket::class,
