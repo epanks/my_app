@@ -8,6 +8,17 @@
 @endif
 <div class="row mt-5">
     <div class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Paket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Output</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Progres</a>
+            </li>                
+        </ul>
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Daftar Balai</h3>

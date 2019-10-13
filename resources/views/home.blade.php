@@ -12,10 +12,21 @@
                     <div class="info-box">
                         <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-map"></i></span>                
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="/wilayah">Wilayah</a></span>
+                            <span class="info-box-text">
+                                {{-- <a href="/wilayah"> --}}
+                                    Wilayah
+                                {{-- </a> --}}
+                            </span>
                             <span class="info-box-number">
-                                        {{$wilayah->count()}}
-                                        <small>balai</small>
+                                        {{-- {{$wilayah->count()}}
+                                        <small>wilayah</small> <br/>   --}}
+                                        @foreach ($wilayah as $no => $wilayah)
+                                        <tr>                                            
+                                            <td>
+                                                <small><a href="/wilayah/{{$wilayah->id}}">{{++$no}}.{{$wilayah->nmwilayah}} </small><br/>                                         
+                                            </td>
+                                        </tr>    
+                                        @endforeach
                             </span>
                         </div>
                     </div>
@@ -78,7 +89,7 @@
                 <div class="col-lg-4 col-6">
                     <div class="small-box bg-success">
                         <div class="inner">
-                            {{-- <h3><sup style="font-size: 20px">Rp</sup>{{number_format($satker2->sum('pagurmp'))}}</h3>                         --}}
+                            <h3><sup style="font-size: 20px">Rp</sup>{{number_format($paket->sum('pagurmp'))}}</h3>                        
                             <p>Jumlah Pagu</p>
                         </div>
                         <div class="icon">
