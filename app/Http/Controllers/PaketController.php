@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Paket;
 use App\Wilayah;
+use App\Paket7;
+use App\Balai;
 
 class PaketController extends Controller
 {
@@ -22,6 +24,14 @@ class PaketController extends Controller
     public function satker($id)
     {
         $data_satker = Balai::find($id)->satker;
+        //$wilayah=Wilayah::get();
+        //dd($data_satker);
+        return view('satker.satker', compact('data_satker','wilayah'));
+    }
+
+    public function progres($id)
+    {
+        $data_paket = Paket::find($id)->satker;
         //$wilayah=Wilayah::get();
         //dd($data_satker);
         return view('satker.satker', compact('data_satker','wilayah'));

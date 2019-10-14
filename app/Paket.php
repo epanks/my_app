@@ -12,4 +12,9 @@ class Paket extends Model
     {
         return $this->belongsTo(Satker::class);
     }
+
+    public function paket7()
+    {
+        return $this->hasOne(Paket7::class);
+    }
 }

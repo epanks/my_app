@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box">
+                    <div class="info-box mb-3">
                         <span class="info-box-icon bg-info elevation-1"><i class="fas fa-building"></i></span>                
                         <div class="info-box-content">
                             <span class="info-box-text"><a href="/balai">Jumlah Balai</a></span>
@@ -83,7 +83,7 @@
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
@@ -95,7 +95,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
@@ -107,7 +107,7 @@
                         <div class="icon">
                             <i class="ion ion-pie-graph"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        
                     </div>
                 </div>
             </div>

@@ -44,10 +44,10 @@ class BalaiController extends Controller
 
     public function satker($id)
     {
-        $dtsatker = Balai::find($id)->satker()->paginate(10);
-        $listbalai = Balai::find($id);
-        $listpaket = $listbalai->paket;
-        //dd($dtsatker);
-        return view('balai.satker', compact('dtsatker', 'listbalai', 'listpaket'));
+        $data_satker = Balai::find($id)->satker()->paginate(10);
+        $data_balai = Balai::find($id);
+        $data_paket = $data_balai->paket;
+        //dd($data_paket);
+        return view('balai.satker', compact('data_satker', 'data_balai', 'data_paket'));
     }
 }

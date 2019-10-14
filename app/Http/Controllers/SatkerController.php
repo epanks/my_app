@@ -22,10 +22,11 @@ class SatkerController extends Controller
 
     public function paket($id)
     {
-        $data_satker = Satker::find($id)->paket;
+        $data_satker=Satker::find($id);
+        $data_paket = Satker::find($id)->paket;
         $data_balai = $data_satker;
         //dd($data_satker);
-        return view('satker.paket', compact('data_satker','wilayah'));
+        return view('satker.paket', compact('data_satker','data_balai','data_paket'));
     }
    
     public function profile($id)
