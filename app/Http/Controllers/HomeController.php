@@ -7,6 +7,7 @@ use App\Wilayah;
 use App\Balai;
 use App\Satker;
 use App\Paket;
+use App\Paket7;
 
 class HomeController extends Controller
 {
@@ -36,7 +37,8 @@ class HomeController extends Controller
         $balai = Balai::all();
         $satker = Satker::all();
         $wilayah = Wilayah::all();
-        //dd($paket);
-        return view('home', compact('satker', 'balai','wilayah','paket'));
+        $paket7=Paket7::all();
+        //dd($paket7);
+        return view('home', compact('satker', 'balai','wilayah','paket','paket7'));
     }
 }

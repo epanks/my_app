@@ -89,7 +89,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            {{-- <h3>{{number_format($satker2->avg('progres_keu'),2)}}</h3>                         --}}
+                            <h3>{{number_format($paket7->avg('progres_keu'),2)}}</h3>                        
                             <p>Progres Keuangan</p>
                         </div>
                         <div class="icon">
@@ -101,7 +101,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            {{-- <h3>{{number_format($satker2->avg('progres_fisik'),2)}}</h3>                         --}}
+                            <h3>{{number_format($paket7->avg('progres_fisik'),2)}}</h3>                        
                             <p>Progres Fisik</p>
                         </div>
                         <div class="icon">

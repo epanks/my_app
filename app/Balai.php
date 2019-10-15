@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Balai extends Model
 {
+    use \Staudenmeir\EloquentHasManyDeep\HasRelationships;
     protected $table = 'balai';
     public function satker()
     {
@@ -17,6 +18,25 @@ class Balai extends Model
     }
     public function paket()
     {
-        return $this->hasManyThrough(Paket::class, Satker::class, 'balai_id', 'kdsatker', 'id', 'kdsatker');
+        return $this->hasManyThrough(Paket::class, Satker::class,'balai_id','kdsatker','id','kdsatker');
+    }
+    public function paket7()
+    {
+        return $this->hasManyDeep(Paket7::class,
+        [Satker::class,Paket::class],
+        [
+            'balai_id',
+            'kdsatker',
+            'id'
+        ],
+        [
+         'id',
+         'kdsatker',
+         'id'   
+        ]); 
+    }
+    public function joinwilayahkabeh()
+    {
+        return $this->belongsTo(Wilayah::class);
     }
 }

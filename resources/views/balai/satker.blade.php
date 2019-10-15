@@ -64,7 +64,7 @@
                             </a>
                         </span>
                         <span class="info-box-number">
-                                    {{$data_balai->count()}}
+                                    {{$data_paket7->avg('progres_keu')}}
                                     <small>%</small> <br/>                                     
                         </span>
                     </div>
@@ -76,7 +76,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Progres Fisik</a></span>
                         <span class="info-box-number">
-                                    {{$data_satker->count()}}
+                                {{$data_paket7->avg('progres_fisik')}}
                                     <small>%</small>
                         </span>
                     </div>

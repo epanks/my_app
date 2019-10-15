@@ -9,7 +9,7 @@
 
 <img class="profile-user-img img-responsive center-block" src="/img/logopu.jpg" alt="User profile picture">  
         <h1 class="profile-username text-center">
-            {{-- {{$wilayah->nmwilayah}} --}}
+            {{$wilayah->nmwilayah}}
         </h1>  
         <p class="text-muted text-center">Pusat Air Tanah dan Air Baku</p>
 <div class="row mt-5">
@@ -36,9 +36,7 @@
                     <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-map"></i></span>                
                     <div class="info-box-content">
                         <span class="info-box-text">
-                        <a href="/satker">
-                                Jumlah Satker
-                            </a>
+                                Jumlah Satker                           
                         </span>
                         <span class="info-box-number">
                                     {{$data_satker->count()}}
@@ -51,7 +49,7 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-building"></i></span>                
                     <div class="info-box-content">
-                        <span class="info-box-text"><a href="/balai">Jumlah Paket</a></span>
+                        <span class="info-box-text">Jumlah Paket</a></span>
                         <span class="info-box-number">
                                     {{$listpaket->count()}}
                                     <small>paket</small>
@@ -63,7 +61,7 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-dollar-sign"></i></span>                
                     <div class="info-box-content">
-                        <span class="info-box-text"><a href="/balai">Pagu</a></span>
+                        <span class="info-box-text">Pagu</a></span>
                         <span class="info-box-number">
                                 <small>Rp</small>
                                     {{number_format($listpaket->sum('pagurmp'))}}
@@ -76,8 +74,7 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-chart-bar"></i></span>                
                     <div class="info-box-content">
-                        <span class="info-box-text">
-                        
+                        <span class="info-box-text">                        
                                 Progres Keuangan
                             </a>
                         </span>
@@ -113,13 +110,12 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Balai</th>
-                            {{-- <th>Nama Paket</th>
                             <th>Pagu</th>
                             <th>Rencana Keuangan</th>
                             <th>Rencana Fisik</th>
                             <th>Progres Keuangan</th>
                             <th>Progres Fisik</th>
-                            <th>Satker ID</th> --}}
+                            <th>Satker ID</th>
                             
                         </tr>
 

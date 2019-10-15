@@ -33,21 +33,23 @@ class BalaiController extends Controller
     {
         $wilayah=Wilayah::find($id);
         $data_balai = Wilayah::find($id)->balai;
+        //$balaipaket = $data_balai->paket7;
         $data_satker = Wilayah::find($id)->satker;
         $listpaket =Wilayah::find($id)->paket; 
         //$listpaket = $data_balai->paket;
         // $listbalai = $listbalai->paket;
         //dd($listpaket);
-        //dd($data_satker);
+        //dd($balaipaket);
         return view('balai.balai', compact('wilayah','data_balai','data_satker','listpaket'));
     }
 
     public function satker($id)
     {
-        $data_satker = Balai::find($id)->satker()->paginate(10);
+        $data_satker = Balai::find($id)->satker;
         $data_balai = Balai::find($id);
         $data_paket = $data_balai->paket;
-        //dd($data_paket);
-        return view('balai.satker', compact('data_satker', 'data_balai', 'data_paket'));
+        $data_paket7=$data_balai->paket7;
+        //dd($data_satker);
+        return view('balai.satker', compact('data_satker', 'data_balai', 'data_paket','data_paket7'));
     }
 }
