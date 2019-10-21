@@ -29,5 +29,6 @@ Route::get('/satker/{id}','SatkerController@paket');
 
 Route::get('/paket','PaketController@index');
 Route::get('/paket/{id}','PaketController@paket');
+Route::get('/paket/{id}/edit','PaketController@edit');
 
 Route::get('/desa','DesaController@index');

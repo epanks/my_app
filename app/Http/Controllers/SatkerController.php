@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Satker;
 use App\Balai;
 use App\Wilayah;
+use App\Paket;
+use App\Paket7;
 
 class SatkerController extends Controller
 {
@@ -24,8 +26,8 @@ class SatkerController extends Controller
     {
         $data_satker=Satker::find($id);
         $data_paket = Satker::find($id)->paket;
-        $data_balai = $data_satker;
-        //dd($data_satker);
+        $data_balai = Satker::find($id)->paket7;
+        dd($data_balai);
         return view('satker.paket', compact('data_satker','data_balai','data_paket'));
     }
    

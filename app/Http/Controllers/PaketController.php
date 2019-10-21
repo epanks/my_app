@@ -36,4 +36,34 @@ class PaketController extends Controller
         //dd($data_satker);
         return view('satker.satker', compact('data_satker','wilayah'));
     }
+
+    public function create(Request $request)
+    {
+        Paket::create($request->all());
+        return redirect('/paket')->with('sukses', 'Data berhasil diinput');
+    }
+    public function edit($id)
+    {
+        $data_paket = Paket::find($id);
+        $data_paket7=Paket7::find($id);
+        //dd($data_paket7);
+        return view('paket/edit', compact('data_paket','data_paket7'));
+    }
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'progres_keu' => 'numeric|between:0,100',
+            'progres_fisik' => 'numeric|between:0,100'
+        ]);
+        $data_paket = Paket::find($id);
+        //->join;
+        $data_paket->update($request->all());
+        return redirect('/satker')->with('sukses', 'Data berhasil diupdate');
+    }
+    public function delete($id)
+    {
+        $data_paket = Paket::find($id);
+        $data_paket->delete($data_paket);
+        return redirect('/paket')->with('sukses', 'Data berhasil dihapus');
+    }
 }

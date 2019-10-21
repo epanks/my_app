@@ -8,6 +8,9 @@ use App\Satker;
 class Paket extends Model
 {
     protected $table = 'paket';
+    protected $fillable = [
+        'kdsatker', 'urutpkt','nmpaket', 'pagurmp', 'trgoutput', 'procapaiOutput', 'satoutput', 'kdoutput','pagurmp','TahunFisik'
+    ];
     public function satker()
     {
         return $this->belongsTo(Satker::class);
